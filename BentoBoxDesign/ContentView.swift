@@ -10,9 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+            Image(systemName: "lasso.badge.sparkles")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 125)
             Text("Hello, world!")
         }
         .padding()
