@@ -25,8 +25,15 @@ struct ContentView: View {
                         .frame(height: 100)
                     
                     // Middle row
-                    Rectangle()
-                        .fill(.gray)
+                    ZStack {
+                        Rectangle()
+                            .fill(.gray)
+                        
+                        // Chip
+                        Rectangle()
+                            .fill(.black)
+                            .frame(width: 150, height: 150)
+                    }
                     
                     // Bottom row
                     Rectangle()
