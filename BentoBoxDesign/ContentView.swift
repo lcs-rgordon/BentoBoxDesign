@@ -34,8 +34,18 @@ struct ContentView: View {
                             Rectangle()
                                 .fill(.black)
                             
-                            Text(" M2")
-                                .foregroundStyle(.white)
+                            VStack(spacing: -5) {
+                                HStack(alignment: .firstTextBaseline, spacing: 2) {
+                                    Text("")
+                                        .font(.custom("SF Pro Medium", size: 48.0, relativeTo: .largeTitle))
+                                    Text("M2")
+                                        .font(.custom("SF Pro Medium", size: 38.0, relativeTo: .largeTitle))
+                                }
+                                
+                                Text("MAX")
+                                    .font(.custom("SF Pro Medium", size: 22.0, relativeTo: .largeTitle))
+                            }
+                            .foregroundStyle(.white)
                         }
                         .frame(width: 150, height: 150)
                         
