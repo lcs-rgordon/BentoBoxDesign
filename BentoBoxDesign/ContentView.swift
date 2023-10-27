@@ -30,9 +30,15 @@ struct ContentView: View {
                             .fill(.gray)
                         
                         // Chip
-                        Rectangle()
-                            .fill(.black)
-                            .frame(width: 150, height: 150)
+                        ZStack {
+                            Rectangle()
+                                .fill(.black)
+                            
+                            Text(" M2")
+                                .foregroundStyle(.white)
+                        }
+                        .frame(width: 150, height: 150)
+                        
                     }
                     
                     // Bottom row
