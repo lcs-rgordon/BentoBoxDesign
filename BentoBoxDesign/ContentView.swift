@@ -38,10 +38,21 @@ struct ContentView: View {
                                 HStack(alignment: .firstTextBaseline, spacing: 2) {
                                     Text("")
                                         .font(.custom("SF Pro Medium", size: 48.0, relativeTo: .largeTitle))
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: [
+                                                    Color(hue: 0, saturation: 0, brightness: 0.4),
+                                                    Color(hue: 0, saturation: 0, brightness: 1.0)
+                                                ],
+                                                startPoint: .bottomLeading,
+                                                endPoint: .topTrailing
+                                            )
+                                        )
                                     Text("M2")
                                         .font(.custom("SF Pro Medium", size: 38.0, relativeTo: .largeTitle))
+                                        .foregroundStyle(Color(hue: 0, saturation: 0, brightness: 0.8))
                                 }
-                                
+
                                 Text("MAX")
                                     .font(.custom("SF Pro Medium", size: 22.0, relativeTo: .largeTitle))
                             }
