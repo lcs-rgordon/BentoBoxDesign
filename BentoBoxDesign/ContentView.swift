@@ -12,11 +12,19 @@ struct ContentView: View {
         VStack {
             HStack {
                 Rectangle()
-                    .fill(.gray)
+                    .fill(.red)
+                VStack {
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(height: 100)
+                    Rectangle()
+                        .fill(.gray)
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(height: 75)
+                }
                 Rectangle()
-                    .fill(.gray)
-                Rectangle()
-                    .fill(.gray)
+                    .fill(.green)
 
             }
         }
