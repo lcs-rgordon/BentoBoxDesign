@@ -64,7 +64,7 @@ struct ContentView: View {
                             
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             VStack(spacing: 10) {
                                 Image("thunderbolt")
@@ -83,7 +83,7 @@ struct ContentView: View {
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             VStack(spacing: 13) {
                                 Text("Up to")
@@ -126,7 +126,7 @@ struct ContentView: View {
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
-                            .cornerRadius(10.0)
+                            .cornerRadius(15.0)
                         
                         VStack {
                             
@@ -205,7 +205,7 @@ struct ContentView: View {
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             VStack(spacing: 3) {
                                 Text("16-core")
@@ -268,7 +268,7 @@ struct ContentView: View {
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             VStack(spacing: 13) {
                                 Text("")
@@ -311,7 +311,7 @@ struct ContentView: View {
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
-                            .cornerRadius(10.0)
+                            .cornerRadius(15.0)
                         
                         Text("High-performance\nmedia engine with ProRes")
                             .multilineTextAlignment(.center)
@@ -338,7 +338,7 @@ struct ContentView: View {
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             VStack(spacing: 13) {
                                 Text("Up to")
@@ -379,7 +379,7 @@ struct ContentView: View {
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             Text("Industry-leading performance\nper watt")
                                 .multilineTextAlignment(.center)
@@ -410,7 +410,7 @@ struct ContentView: View {
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
-                            .cornerRadius(10.0)
+                            .cornerRadius(15.0)
                         
                         // Chip
                         ZStack {
@@ -456,7 +456,7 @@ struct ContentView: View {
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
-                            .cornerRadius(10.0)
+                            .cornerRadius(15.0)
                         
                         VStack(spacing: 3) {
                             Text("Second-generation")
@@ -497,7 +497,7 @@ struct ContentView: View {
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
-                            .cornerRadius(10.0)
+                            .cornerRadius(15.0)
                         
                         VStack(spacing: 2) {
                             Text("Up to")
@@ -539,7 +539,7 @@ struct ContentView: View {
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             VStack(spacing: 4) {
                                 
@@ -583,7 +583,7 @@ struct ContentView: View {
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
-                                .cornerRadius(10.0)
+                                .cornerRadius(15.0)
                             
                             VStack(spacing: 0) {
                                 
@@ -635,7 +635,7 @@ struct ContentView: View {
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
-                            .cornerRadius(10.0)
+                            .cornerRadius(15.0)
                         
                         
                         
