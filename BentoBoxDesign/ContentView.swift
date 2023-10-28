@@ -536,9 +536,49 @@ struct ContentView: View {
                     .frame(height: 120)
                     
                     HStack {
-                        Rectangle()
-                            .fill(lightGray)
-                            .cornerRadius(10.0)
+                        ZStack {
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            VStack(spacing: 4) {
+                                
+                                Image("cpu")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 30)
+                                
+                                VStack(spacing: 4) {
+                                    Text("12-core")
+                                        .font(
+                                            .custom(
+                                                "SF Pro Semibold",
+                                                size: 20.0,
+                                                relativeTo: .largeTitle
+                                            )
+                                        )
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: [
+                                                    startingPurpleForLetters,
+                                                    endingPurpleForLetters
+                                                ],
+                                                startPoint: .leading,
+                                                endPoint: .trailing
+                                            )
+                                        )
+                                        .padding(.horizontal, 5)
+                                    
+                                    Text("CPU")
+                                        .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                        .tracking(-0.5)
+                                        .foregroundStyle(.black)
+
+                                }
+                            }
+
+                        }
                         
                         Rectangle()
                             .fill(lightGray)
