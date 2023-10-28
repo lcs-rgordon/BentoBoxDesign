@@ -73,16 +73,52 @@ struct ContentView: View {
                                     .frame(width: 70)
                                 
                                 Text("Thunderbolt 4")
-                                    .font(.custom("SF Pro Semibold", size: 12.0, relativeTo: .largeTitle))
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
                                     .tracking(-0.5)
                                     .foregroundStyle(.black)
                             }
                             
                         }
                         
-                        Rectangle()
-                            .fill(lightGray)
-                            .cornerRadius(10.0)
+                        ZStack {
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            VStack(spacing: 13) {
+                                Text("Up to")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                                
+                                Text("20%")
+                                    .multilineTextAlignment(.center)
+                                    .font(
+                                        .custom(
+                                            "SF Pro Semibold",
+                                            size: 40.0,
+                                            relativeTo: .largeTitle
+                                        )
+                                    )
+                                    .tracking(-1)
+                                    .foregroundStyle(
+                                        LinearGradient(
+                                            colors: [
+                                                startingPurpleForLetters,
+                                                endingPurpleForLetters
+                                            ],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                
+                                
+                                Text("faster CPU")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                            }
+                        }
                     }
                     .frame(height: 120)
                     
@@ -170,7 +206,7 @@ struct ContentView: View {
                                 .fill(lightGray)
                                 .cornerRadius(10.0)
                             
-                            VStack(spacing: 4) {
+                            VStack(spacing: 3) {
                                 Text("16-core")
                                     .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
                                     .tracking(-0.5)
@@ -233,7 +269,7 @@ struct ContentView: View {
                                 .fill(lightGray)
                                 .cornerRadius(10.0)
                             
-                            VStack(spacing: 14) {
+                            VStack(spacing: 13) {
                                 Text("")
                                     .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
                                     .tracking(-0.5)
@@ -298,9 +334,45 @@ struct ContentView: View {
                     
                     // Top row
                     HStack {
-                        Rectangle()
-                            .fill(lightGray)
-                            .cornerRadius(10.0)
+                        ZStack {
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            VStack(spacing: 13) {
+                                Text("Up to")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                                
+                                Text("30%")
+                                    .multilineTextAlignment(.center)
+                                    .font(
+                                        .custom(
+                                            "SF Pro Semibold",
+                                            size: 40.0,
+                                            relativeTo: .largeTitle
+                                        )
+                                    )
+                                    .tracking(-1)
+                                    .foregroundStyle(
+                                        LinearGradient(
+                                            colors: [
+                                                startingPurpleForLetters,
+                                                endingPurpleForLetters
+                                            ],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                
+                                
+                                Text("faster GPU")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                            }
+                        }
                             .frame(width: 120)
                         
                         ZStack {
