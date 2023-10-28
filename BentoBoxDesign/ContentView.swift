@@ -49,7 +49,17 @@ struct ContentView: View {
         saturation: 0.85,
         brightness: 0.65
     )
-    
+    let almostBlack = Color(
+        hue: 0/360.0,
+        saturation: 0.0,
+        brightness: 0.3
+    )
+    let black = Color(
+        hue: 0/360.0,
+        saturation: 0.0,
+        brightness: 0.0
+    )
+
     var body: some View {
         VStack {
             HStack {
@@ -415,7 +425,14 @@ struct ContentView: View {
                         // Chip
                         ZStack {
                             Rectangle()
-                                .fill(.black)
+                                .fill(
+                                    RadialGradient(
+                                        colors: [almostBlack, black],
+                                        center: .topLeading,
+                                        startRadius: 0,
+                                        endRadius: 450
+                                    )
+                                )
                             
                             VStack(spacing: -8) {
                                 HStack(alignment: .firstTextBaseline, spacing: 2) {
