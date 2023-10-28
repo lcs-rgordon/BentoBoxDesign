@@ -160,6 +160,7 @@ struct ContentView: View {
                                         relativeTo: .largeTitle
                                     )
                                 )
+                                .tracking(-1)
                                 .foregroundStyle(
                                     LinearGradient(
                                         colors: [
@@ -311,7 +312,6 @@ struct ContentView: View {
                         Rectangle()
                             .fill(lightGray)
                             .cornerRadius(10.0)
-                            .frame(height: 90)
                         
                         Text("High-performance\nmedia engine with ProRes")
                             .multilineTextAlignment(.center)
@@ -327,6 +327,7 @@ struct ContentView: View {
                             .padding(.horizontal, 5)
                         
                     }
+                    .frame(height: 90)
                 }
                 
                 // Middle column
@@ -544,10 +545,56 @@ struct ContentView: View {
                             .cornerRadius(10.0)
                     }
                     
-                    Rectangle()
-                        .fill(lightGray)
-                        .cornerRadius(10.0)
-                        .frame(height: 180)
+                    ZStack {
+                        Rectangle()
+                            .fill(lightGray)
+                            .cornerRadius(10.0)
+                        
+                        
+                        
+                        VStack {
+                            
+                            Text("400GB/s")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 44.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .tracking(-1)
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            startingPurpleForLetters,
+                                            endingPurpleForLetters
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .padding(.horizontal, 5)
+                            
+                            Text("Memory bandwidth")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 20.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .tracking(-0.5)
+                                .foregroundStyle(.black)
+                                .padding(.horizontal, 5)
+                            
+                            
+                        }
+                        
+                    }
+                    .frame(height: 180)
+                    
                 }
                 
             }
