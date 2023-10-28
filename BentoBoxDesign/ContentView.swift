@@ -12,7 +12,7 @@ struct ContentView: View {
     let lightGray = Color(
         hue: 0/360.0,
         saturation: 0.0,
-        brightness: 0.9
+        brightness: 0.93
     )
     let mediumGray = Color(
         hue: 0/360.0,
@@ -49,36 +49,52 @@ struct ContentView: View {
                     
                     // Row 1
                     HStack {
-                        Rectangle()
-                            .fill(mediumGray)
-                            .cornerRadius(10.0)
+                        
+                        ZStack {
+                                                        
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            VStack(spacing: 10) {
+                                Image("thunderbolt")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 70)
+                                
+                                Text("Thunderbolt 4")
+                                    .font(.custom("SF Pro Semibold", size: 12.0, relativeTo: .largeTitle))
+                                    .foregroundStyle(.black)
+                            }
+
+                        }
 
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
                     }
                     .frame(height: 120)
 
                     // Row 2
                     Rectangle()
-                        .fill(mediumGray)
+                        .fill(lightGray)
                         .cornerRadius(10.0)
 
                     // Row 3
                     HStack {
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
 
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
                     }
                     .frame(height: 125)
 
                     // Row 4
                     Rectangle()
-                        .fill(mediumGray)
+                        .fill(lightGray)
                         .cornerRadius(10.0)
                         .frame(height: 90)
                 }
@@ -89,12 +105,12 @@ struct ContentView: View {
                     // Top row
                     HStack {
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
                             .frame(width: 120)
 
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
                     }
                     .frame(height: 120)
@@ -102,7 +118,7 @@ struct ContentView: View {
                     // Middle row
                     ZStack {
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
 
                         // Chip
@@ -147,7 +163,7 @@ struct ContentView: View {
                     
                     // Bottom row
                     Rectangle()
-                        .fill(mediumGray)
+                        .fill(lightGray)
                         .cornerRadius(10.0)
                         .frame(height: 90)
                 }
@@ -155,22 +171,22 @@ struct ContentView: View {
                 // Right column
                 VStack {
                     Rectangle()
-                        .fill(mediumGray)
+                        .fill(lightGray)
                         .cornerRadius(10.0)
                         .frame(height: 120)
 
                     HStack {
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
                         
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(10.0)
                     }
 
                     Rectangle()
-                        .fill(mediumGray)
+                        .fill(lightGray)
                         .cornerRadius(10.0)
                         .frame(height: 180)
                 }
