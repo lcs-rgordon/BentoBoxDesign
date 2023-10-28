@@ -53,11 +53,18 @@ struct ContentView: View {
                 VStack {
                     
                     // Top row
-                    Rectangle()
-                        .fill(mediumGray)
-                        .cornerRadius(10.0)
-                        .frame(height: 100)
-                    
+                    HStack {
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+                        
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+                            .frame(width: 150)
+                    }
+                    .frame(height: 100)
+
                     // Middle row
                     ZStack {
                         Rectangle()
