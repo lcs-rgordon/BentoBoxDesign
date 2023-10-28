@@ -39,6 +39,16 @@ struct ContentView: View {
         saturation: 0.65,
         brightness: 0.50
     )
+    let startingPurpleForLetters = Color(
+        hue: 286.0/360.0,
+        saturation: 0.20,
+        brightness: 0.80
+    )
+    let endingPurpleForLetters = Color(
+        hue: 286.0/360.0,
+        saturation: 0.85,
+        brightness: 0.65
+    )
 
     var body: some View {
         VStack {
@@ -109,9 +119,33 @@ struct ContentView: View {
                             .cornerRadius(10.0)
                             .frame(width: 120)
 
-                        Rectangle()
-                            .fill(lightGray)
-                            .cornerRadius(10.0)
+                        ZStack {
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            Text("Industry-leading performance\nper watt")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 20.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            startingPurpleForLetters,
+                                            endingPurpleForLetters
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .padding(.horizontal, 5)
+
+                        }
                     }
                     .frame(height: 120)
 
@@ -157,7 +191,7 @@ struct ContentView: View {
                             }
                             .foregroundStyle(.white)
                         }
-                        .frame(width: 200, height: 200)
+                        .frame(width: 225, height: 225)
                         
                     }
                     
@@ -167,6 +201,7 @@ struct ContentView: View {
                         .cornerRadius(10.0)
                         .frame(height: 90)
                 }
+                .frame(width: 345)
                 
                 // Right column
                 VStack {
