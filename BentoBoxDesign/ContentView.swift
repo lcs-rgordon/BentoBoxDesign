@@ -49,7 +49,7 @@ struct ContentView: View {
         saturation: 0.85,
         brightness: 0.65
     )
-
+    
     var body: some View {
         VStack {
             HStack {
@@ -61,7 +61,7 @@ struct ContentView: View {
                     HStack {
                         
                         ZStack {
-                                                        
+                            
                             Rectangle()
                                 .fill(lightGray)
                                 .cornerRadius(10.0)
@@ -77,15 +77,15 @@ struct ContentView: View {
                                     .tracking(-0.5)
                                     .foregroundStyle(.black)
                             }
-
+                            
                         }
-
+                        
                         Rectangle()
                             .fill(lightGray)
                             .cornerRadius(10.0)
                     }
                     .frame(height: 120)
-
+                    
                     // Row 2
                     ZStack {
                         Rectangle()
@@ -135,7 +135,7 @@ struct ContentView: View {
                                     )
                                 )
                                 .padding(.horizontal, 5)
-
+                            
                             
                             Text("transistors")
                                 .multilineTextAlignment(.center)
@@ -157,12 +157,12 @@ struct ContentView: View {
                                     )
                                 )
                                 .padding(.horizontal, 5)
-
-
+                            
+                            
                             
                         }
                     }
-
+                    
                     // Row 3
                     HStack {
                         ZStack {
@@ -220,20 +220,56 @@ struct ContentView: View {
                                         )
                                 }
                                 .padding(.bottom, 4)
-
+                                
                                 Text("15.8 trillion ops/s")
                                     .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
                                     .tracking(-0.5)
                                     .foregroundStyle(.black)
                             }
                         }
-
-                        Rectangle()
-                            .fill(lightGray)
-                            .cornerRadius(10.0)
+                        
+                        ZStack {
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            VStack(spacing: 14) {
+                                Text("")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                                
+                                Text("40%")
+                                    .multilineTextAlignment(.center)
+                                    .font(
+                                        .custom(
+                                            "SF Pro Semibold",
+                                            size: 40.0,
+                                            relativeTo: .largeTitle
+                                        )
+                                    )
+                                    .tracking(-1)
+                                    .foregroundStyle(
+                                        LinearGradient(
+                                            colors: [
+                                                startingPurpleForLetters,
+                                                endingPurpleForLetters
+                                            ],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                
+                                
+                                Text("Faster Neural Engine")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                            }
+                        }
                     }
                     .frame(height: 125)
-
+                    
                     // Row 4
                     ZStack {
                         Rectangle()
@@ -253,10 +289,10 @@ struct ContentView: View {
                             .tracking(-0.5)
                             .foregroundStyle(.black)
                             .padding(.horizontal, 5)
-
+                        
                     }
                 }
-
+                
                 // Middle column
                 VStack {
                     
@@ -266,7 +302,7 @@ struct ContentView: View {
                             .fill(lightGray)
                             .cornerRadius(10.0)
                             .frame(width: 120)
-
+                        
                         ZStack {
                             Rectangle()
                                 .fill(lightGray)
@@ -292,17 +328,17 @@ struct ContentView: View {
                                     )
                                 )
                                 .padding(.horizontal, 5)
-
+                            
                         }
                     }
                     .frame(height: 120)
-
+                    
                     // Middle row
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
                             .cornerRadius(10.0)
-
+                        
                         // Chip
                         ZStack {
                             Rectangle()
@@ -329,7 +365,7 @@ struct ContentView: View {
                                             )
                                         )
                                 }
-
+                                
                                 
                                 Text("MAX")
                                     .font(.custom("SF Pro Medium", size: 32.0, relativeTo: .largeTitle))
@@ -357,7 +393,7 @@ struct ContentView: View {
                         .fill(lightGray)
                         .cornerRadius(10.0)
                         .frame(height: 120)
-
+                    
                     HStack {
                         Rectangle()
                             .fill(lightGray)
@@ -367,13 +403,13 @@ struct ContentView: View {
                             .fill(lightGray)
                             .cornerRadius(10.0)
                     }
-
+                    
                     Rectangle()
                         .fill(lightGray)
                         .cornerRadius(10.0)
                         .frame(height: 180)
                 }
-
+                
             }
         }
         .padding(10)
