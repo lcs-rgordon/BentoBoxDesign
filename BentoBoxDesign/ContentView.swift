@@ -74,6 +74,7 @@ struct ContentView: View {
                                 
                                 Text("Thunderbolt 4")
                                     .font(.custom("SF Pro Semibold", size: 12.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
                                     .foregroundStyle(.black)
                             }
 
@@ -164,9 +165,68 @@ struct ContentView: View {
 
                     // Row 3
                     HStack {
-                        Rectangle()
-                            .fill(lightGray)
-                            .cornerRadius(10.0)
+                        ZStack {
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            VStack(spacing: 4) {
+                                Text("16-core")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                                
+                                VStack(spacing: -12) {
+                                    Text("Neural")
+                                        .multilineTextAlignment(.center)
+                                        .font(
+                                            .custom(
+                                                "SF Pro Semibold",
+                                                size: 33.0,
+                                                relativeTo: .largeTitle
+                                            )
+                                        )
+                                        .tracking(-1)
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: [
+                                                    startingPurpleForLetters,
+                                                    endingPurpleForLetters
+                                                ],
+                                                startPoint: .leading,
+                                                endPoint: .trailing
+                                            )
+                                        )
+                                    
+                                    Text("Engine")
+                                        .multilineTextAlignment(.center)
+                                        .font(
+                                            .custom(
+                                                "SF Pro Semibold",
+                                                size: 32.0,
+                                                relativeTo: .largeTitle
+                                            )
+                                        )
+                                        .tracking(-1)
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: [
+                                                    startingPurpleForLetters,
+                                                    endingPurpleForLetters
+                                                ],
+                                                startPoint: .leading,
+                                                endPoint: .trailing
+                                            )
+                                        )
+                                }
+                                .padding(.bottom, 4)
+
+                                Text("15.8 trillion ops/s")
+                                    .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                    .tracking(-0.5)
+                                    .foregroundStyle(.black)
+                            }
+                        }
 
                         Rectangle()
                             .fill(lightGray)
@@ -190,6 +250,7 @@ struct ContentView: View {
                                     relativeTo: .largeTitle
                                 )
                             )
+                            .tracking(-0.5)
                             .foregroundStyle(.black)
                             .padding(.horizontal, 5)
 
