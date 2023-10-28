@@ -452,10 +452,42 @@ struct ContentView: View {
                     }
                     
                     // Bottom row
-                    Rectangle()
-                        .fill(lightGray)
-                        .cornerRadius(10.0)
-                        .frame(height: 90)
+                    ZStack {
+                        Rectangle()
+                            .fill(lightGray)
+                            .cornerRadius(10.0)
+                        
+                        VStack(spacing: 3) {
+                            Text("Second-generation")
+                                .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                .tracking(-0.5)
+                                .foregroundStyle(.black)
+                            
+                            Text("5 nm technology")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 33.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .tracking(-1)
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            startingPurpleForLetters,
+                                            endingPurpleForLetters
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+
+                        }
+
+                    }
+                    .frame(height: 90)
                 }
                 .frame(width: 345)
                 
