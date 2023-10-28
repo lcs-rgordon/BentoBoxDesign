@@ -57,7 +57,7 @@ struct ContentView: View {
                             .fill(mediumGray)
                             .cornerRadius(10.0)
                     }
-                    .frame(height: 110)
+                    .frame(height: 120)
 
                     // Row 2
                     Rectangle()
@@ -80,7 +80,7 @@ struct ContentView: View {
                     Rectangle()
                         .fill(mediumGray)
                         .cornerRadius(10.0)
-                        .frame(height: 75)
+                        .frame(height: 90)
                 }
 
                 // Middle column
@@ -91,13 +91,13 @@ struct ContentView: View {
                         Rectangle()
                             .fill(mediumGray)
                             .cornerRadius(10.0)
-                        
+                            .frame(width: 120)
+
                         Rectangle()
                             .fill(mediumGray)
                             .cornerRadius(10.0)
-                            .frame(width: 150)
                     }
-                    .frame(height: 110)
+                    .frame(height: 120)
 
                     // Middle row
                     ZStack {
@@ -110,10 +110,10 @@ struct ContentView: View {
                             Rectangle()
                                 .fill(.black)
                             
-                            VStack(spacing: -5) {
+                            VStack(spacing: -8) {
                                 HStack(alignment: .firstTextBaseline, spacing: 2) {
                                     Text("")
-                                        .font(.custom("SF Pro Medium", size: 48.0, relativeTo: .largeTitle))
+                                        .font(.custom("SF Pro Semibold", size: 68.0, relativeTo: .largeTitle))
                                         .foregroundStyle(
                                             LinearGradient(
                                                 colors: [darkGray, mediumGray],
@@ -122,7 +122,7 @@ struct ContentView: View {
                                             )
                                         )
                                     Text("M2")
-                                        .font(.custom("SF Pro Medium", size: 38.0, relativeTo: .largeTitle))
+                                        .font(.custom("SF Pro Semibold", size: 58.0, relativeTo: .largeTitle))
                                         .foregroundStyle(
                                             LinearGradient(
                                                 colors: [mediumGray, lightGray],
@@ -134,14 +134,14 @@ struct ContentView: View {
 
                                 
                                 Text("MAX")
-                                    .font(.custom("SF Pro Medium", size: 22.0, relativeTo: .largeTitle))
+                                    .font(.custom("SF Pro Medium", size: 32.0, relativeTo: .largeTitle))
                                     .foregroundStyle(
-                                        RadialGradient(colors: [lightPurple, darkPurple], center: .bottomLeading, startRadius: 0, endRadius: 45)
+                                        RadialGradient(colors: [lightPurple, darkPurple], center: .bottomLeading, startRadius: 0, endRadius: 60)
                                     )
                             }
                             .foregroundStyle(.white)
                         }
-                        .frame(width: 170, height: 170)
+                        .frame(width: 200, height: 200)
                         
                     }
                     
@@ -149,19 +149,37 @@ struct ContentView: View {
                     Rectangle()
                         .fill(mediumGray)
                         .cornerRadius(10.0)
-                        .frame(height: 75)
+                        .frame(height: 90)
                 }
                 
                 // Right column
-                Rectangle()
-                    .fill(mediumGray)
-                    .cornerRadius(10.0)
+                VStack {
+                    Rectangle()
+                        .fill(mediumGray)
+                        .cornerRadius(10.0)
+                        .frame(height: 120)
+
+                    HStack {
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+                        
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+                    }
+
+                    Rectangle()
+                        .fill(mediumGray)
+                        .cornerRadius(10.0)
+                        .frame(height: 180)
+                }
 
             }
         }
         .padding(10)
         .background(.white)
-        .frame(width: 830, height: 480)
+        .frame(width: 900, height: 540)
         .cornerRadius(5.0)
         .padding()
     }
