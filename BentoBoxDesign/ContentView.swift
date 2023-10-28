@@ -580,9 +580,56 @@ struct ContentView: View {
 
                         }
                         
-                        Rectangle()
-                            .fill(lightGray)
-                            .cornerRadius(10.0)
+                        ZStack {
+                            Rectangle()
+                                .fill(lightGray)
+                                .cornerRadius(10.0)
+                            
+                            VStack(spacing: 0) {
+                                
+                                Image("gpu")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 6)
+                                
+                                VStack(spacing: 4) {
+
+                                    Text("Up to")
+                                        .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                        .tracking(-0.5)
+                                        .foregroundStyle(.black)
+
+                                    Text("38-core")
+                                        .font(
+                                            .custom(
+                                                "SF Pro Semibold",
+                                                size: 20.0,
+                                                relativeTo: .largeTitle
+                                            )
+                                        )
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: [
+                                                    startingPurpleForLetters,
+                                                    endingPurpleForLetters
+                                                ],
+                                                startPoint: .leading,
+                                                endPoint: .trailing
+                                            )
+                                        )
+                                        .padding(.horizontal, 5)
+                                    
+                                    Text("GPU")
+                                        .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                        .tracking(-0.5)
+                                        .foregroundStyle(.black)
+
+                                }
+                                .padding(.bottom, 8)
+                            }
+
+                        }
                     }
                     
                     ZStack {
