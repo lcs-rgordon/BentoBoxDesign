@@ -55,7 +55,7 @@ struct ContentView: View {
             HStack {
                 
                 // Left column
-                VStack {
+                VStack(spacing: 8) {
                     
                     // Row 1
                     HStack {
@@ -331,7 +331,7 @@ struct ContentView: View {
                 }
                 
                 // Middle column
-                VStack {
+                VStack(spacing: 8) {
                     
                     // Top row
                     HStack {
@@ -493,7 +493,7 @@ struct ContentView: View {
                 .frame(width: 345)
                 
                 // Right column
-                VStack {
+                VStack(spacing: 8) {
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
