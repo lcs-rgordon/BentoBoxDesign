@@ -493,10 +493,46 @@ struct ContentView: View {
                 
                 // Right column
                 VStack {
-                    Rectangle()
-                        .fill(lightGray)
-                        .cornerRadius(10.0)
-                        .frame(height: 120)
+                    ZStack {
+                        Rectangle()
+                            .fill(lightGray)
+                            .cornerRadius(10.0)
+                        
+                        VStack(spacing: 2) {
+                            Text("Up to")
+                                .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                .tracking(-0.5)
+                                .foregroundStyle(.black)
+                            
+                            Text("96GB")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 60.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .tracking(-1)
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            startingPurpleForLetters,
+                                            endingPurpleForLetters
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                            
+                            
+                            Text("LPDDR5 memory")
+                                .font(.custom("SF Pro Semibold", size: 11.0, relativeTo: .largeTitle))
+                                .tracking(-0.5)
+                                .foregroundStyle(.black)
+                        }
+                    }
+                    .frame(height: 120)
                     
                     HStack {
                         Rectangle()
