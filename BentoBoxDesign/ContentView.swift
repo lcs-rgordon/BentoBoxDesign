@@ -45,9 +45,43 @@ struct ContentView: View {
             HStack {
                 
                 // Left column
-                Rectangle()
-                    .fill(mediumGray)
-                    .cornerRadius(10.0)
+                VStack {
+                    
+                    // Row 1
+                    HStack {
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+                    }
+                    .frame(height: 110)
+
+                    // Row 2
+                    Rectangle()
+                        .fill(mediumGray)
+                        .cornerRadius(10.0)
+
+                    // Row 3
+                    HStack {
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+
+                        Rectangle()
+                            .fill(mediumGray)
+                            .cornerRadius(10.0)
+                    }
+                    .frame(height: 125)
+
+                    // Row 4
+                    Rectangle()
+                        .fill(mediumGray)
+                        .cornerRadius(10.0)
+                        .frame(height: 75)
+                }
 
                 // Middle column
                 VStack {
@@ -63,7 +97,7 @@ struct ContentView: View {
                             .cornerRadius(10.0)
                             .frame(width: 150)
                     }
-                    .frame(height: 100)
+                    .frame(height: 110)
 
                     // Middle row
                     ZStack {
@@ -107,7 +141,7 @@ struct ContentView: View {
                             }
                             .foregroundStyle(.white)
                         }
-                        .frame(width: 150, height: 150)
+                        .frame(width: 170, height: 170)
                         
                     }
                     
@@ -127,7 +161,7 @@ struct ContentView: View {
         }
         .padding(10)
         .background(.white)
-        .frame(width: 800, height: 400)
+        .frame(width: 830, height: 480)
         .cornerRadius(5.0)
         .padding()
     }
