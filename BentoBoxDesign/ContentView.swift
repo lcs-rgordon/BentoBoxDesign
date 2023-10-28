@@ -103,10 +103,25 @@ struct ContentView: View {
                     .frame(height: 125)
 
                     // Row 4
-                    Rectangle()
-                        .fill(lightGray)
-                        .cornerRadius(10.0)
-                        .frame(height: 90)
+                    ZStack {
+                        Rectangle()
+                            .fill(lightGray)
+                            .cornerRadius(10.0)
+                            .frame(height: 90)
+                        
+                        Text("High-performance\nmedia engine with ProRes")
+                            .multilineTextAlignment(.center)
+                            .font(
+                                .custom(
+                                    "SF Pro Semibold",
+                                    size: 20.0,
+                                    relativeTo: .largeTitle
+                                )
+                            )
+                            .foregroundStyle(.black)
+                            .padding(.horizontal, 5)
+
+                    }
                 }
 
                 // Middle column
