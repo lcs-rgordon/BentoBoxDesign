@@ -86,9 +86,81 @@ struct ContentView: View {
                     .frame(height: 120)
 
                     // Row 2
-                    Rectangle()
-                        .fill(lightGray)
-                        .cornerRadius(10.0)
+                    ZStack {
+                        Rectangle()
+                            .fill(lightGray)
+                            .cornerRadius(10.0)
+                        
+                        VStack {
+                            
+                            Text("Over")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 20.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            startingPurpleForLetters,
+                                            endingPurpleForLetters
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .padding(.horizontal, 5)
+                            
+                            Text("67 billion")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 44.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            startingPurpleForLetters,
+                                            endingPurpleForLetters
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .padding(.horizontal, 5)
+
+                            
+                            Text("transistors")
+                                .multilineTextAlignment(.center)
+                                .font(
+                                    .custom(
+                                        "SF Pro Semibold",
+                                        size: 20.0,
+                                        relativeTo: .largeTitle
+                                    )
+                                )
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            startingPurpleForLetters,
+                                            endingPurpleForLetters
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .padding(.horizontal, 5)
+
+
+                            
+                        }
+                    }
 
                     // Row 3
                     HStack {
